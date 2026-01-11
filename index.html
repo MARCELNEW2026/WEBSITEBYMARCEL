@@ -3,210 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HACKER - MARCEL</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>Download Roblox Indonesia 2026 - Versi Resmi</title>
+  <meta name="description" content="Download Roblox resmi terbaru untuk Android, iOS, Windows & Mac - Link aman dari situs resmi Roblox"/>
   
   <style>
+    :root {
+      --roblox-red: #e0115f;
+      --roblox-dark: #1b1b1b;
+      --roblox-light: #f5f5f5;
+    }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f001a, #1a001a);
+      color: white;
       min-height: 100vh;
-      background: #0d001a;
-      color: #00ffea;
-      font-family: 'Courier New', Courier, monospace;
-      background-image: 
-        radial-gradient(circle at 15% 50%, rgba(0,255,255,0.08) 0%, transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(255,0,255,0.07) 0%, transparent 30%);
-      overflow-x: hidden;
+      background-attachment: fixed;
     }
-
-    .matrix-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.15;
-    }
-
+    
     .container {
-      position: relative;
-      z-index: 10;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.3em;
+      color: var(--roblox-red);
+      text-shadow: 0 0 20px rgba(224,17,95,0.6);
+    }
+    
+    .subtitle {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+    
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .card {
+      background: rgba(30,30,40,0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(224,17,95,0.2);
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--roblox-red);
+      box-shadow: 0 20px 40px rgba(224,17,95,0.25);
+    }
+    
+    .platform-icon {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--roblox-red);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: #ff1a75;
+      transform: scale(1.06);
+      box-shadow: 0 10px 30px rgba(224,17,95,0.5);
+    }
+    
+    .warning {
+      background: rgba(255,193,7,0.15);
+      border: 1px solid rgba(255,193,7,0.4);
+      color: #ffe082;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 40px 0;
       text-align: center;
     }
-
-    h1 {
-      font-size: clamp(4rem, 10vw, 7rem);
-      font-weight: 900;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00, #00ff00);
-      background-size: 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradient 8s ease infinite;
-      text-shadow: 
-        0 0 15px #00ffff,
-        0 0 30px #ff00ff,
-        0 0 50px #00ff00;
-    }
-
-    .subtitle {
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      color: #00ff9d;
-      text-shadow: 0 0 20px #00ff9d;
-      letter-spacing: 8px;
-    }
-
-    .card {
-      background: rgba(10, 5, 30, 0.5);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 255, 255, 0.3);
-      border-radius: 20px;
-      padding: 3.5rem 4rem;
-      max-width: 680px;
-      width: 90%;
-      box-shadow: 
-        0 0 40px rgba(0,255,255,0.35),
-        inset 0 0 25px rgba(0,255,255,0.12);
-      animation: float 7s ease-in-out infinite;
-    }
-
-    .status {
-      margin-top: 2rem;
-      font-size: 1.35rem;
-      color: #ff2a6d;
-      text-shadow: 0 0 18px #ff2a6d;
-      animation: blink 2.2s infinite;
-      letter-spacing: 2px;
-      line-height: 1.6;
-    }
-
-    /* Animations */
-    @keyframes gradient {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .glitch {
-      position: relative;
-    }
-
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .glitch::before {
-      left: 3px;
-      text-shadow: -3px 0 #ff00aa;
-      animation: glitch-anim 2.5s infinite linear alternate-reverse;
-    }
-
-    .glitch::after {
-      left: -3px;
-      text-shadow: 3px 0 #00ffff;
-      animation: glitch-anim2 4s infinite linear alternate-reverse;
-    }
-
-    @keyframes glitch-anim {
-      0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.6deg); }
-      5% { clip: rect(17px, 9999px, 59px, 0); }
-      100% { clip: rect(65px, 9999px, 98px, 0); transform: skew(0.2deg); }
-    }
-
-    @keyframes glitch-anim2 {
-      0% { clip: rect(65px, 9999px, 119px, 0); }
-      5% { clip: rect(30px, 9999px, 92px, 0); }
-      100% { clip: rect(86px, 9999px, 137px, 0); }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      opacity: 0.7;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <canvas class="matrix-bg" id="matrix"></canvas>
+<div class="container">
+  <header>
+    <h1>Roblox Indonesia 2026</h1>
+    <p class="subtitle">Download Versi Resmi • Aman • Terbaru</p>
+  </header>
 
-  <div class="container">
-    <h1 class="glitch" data-text="HACKER">HACKER</h1>
-    
-    <div class="subtitle">MARCEL</div>
+  <div class="platforms">
+    <div class="card">
+      <div class="platform-icon">📱</div>
+      <h2>Android</h2>
+      <p>Google Play Store Resmi</p>
+      <a href="https://play.google.com/store/apps/details?id=com.roblox.client" 
+         target="_blank" class="btn">Download di Play Store</a>
+    </div>
 
     <div class="card">
-      <div class="status">
-        [SYSTEM ONLINE]<br>
-        [THIS WEBSITE IS WORKING WELL AND WE WILL UPDATE IT SOON WHEN ANYTHING IS DEFICIENT]
-      </div>
+      <div class="platform-icon">🍎</div>
+      <h2>iOS / iPad</h2>
+      <p>App Store Resmi</p>
+      <a href="https://apps.apple.com/id/app/roblox/id431946152" 
+         target="_blank" class="btn">Download di App Store</a>
+    </div>
+
+    <div class="card">
+      <div class="platform-icon">💻</div>
+      <h2>Windows / PC</h2>
+      <p>Installer Resmi Roblox</p>
+      <a href="https://www.roblox.com/download" 
+         target="_blank" class="btn">Download untuk PC</a>
     </div>
   </div>
 
-  <script>
-    // Matrix rain background
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
+  <div class="warning">
+    ⚠️ <strong>PENTING!</strong> Hanya download Roblox dari link resmi di atas.<br>
+    Hindari website pihak ketiga yang menawarkan "Roblox MOD APK", "Roblox Unlimited Robux",<br>
+    atau file .apk di luar Google Play → 99% mengandung <strong>virus/malware</strong>.
+  </div>
+</div>
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+<footer>
+  Bukan situs resmi Roblox • Hanya menyediakan link resmi • © 2026
+</footer>
 
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
-
-    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン$+-*/=%#&@';
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    function draw() {
-      ctx.fillStyle = 'rgba(13, 0, 26, 0.06)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = '#00ff9d';
-      ctx.font = fontSize + 'px monospace';
-
-      for(let i = 0; i < drops.length; i++) {
-        const text = chars.charAt(Math.floor(Math.random() * chars.length));
-        const x = i * fontSize;
-        const y = drops[i] * fontSize;
-
-        ctx.fillText(text, x, y);
-
-        if(y > canvas.height && Math.random() > 0.975)
-          drops[i] = 0;
-
-        drops[i]++;
-      }
-    }
-
-    setInterval(draw, 35);
-  </script>
 </body>
 </html>
