@@ -63,11 +63,11 @@
     }
 
     .subtitle {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 3rem;
       color: #00ff9d;
       text-shadow: 0 0 20px #00ff9d;
-      letter-spacing: 6px;
+      letter-spacing: 8px;
     }
 
     .card {
@@ -76,7 +76,7 @@
       border: 1px solid rgba(0, 255, 255, 0.3);
       border-radius: 20px;
       padding: 3.5rem 4rem;
-      max-width: 600px;
+      max-width: 680px;
       width: 90%;
       box-shadow: 
         0 0 40px rgba(0,255,255,0.35),
@@ -86,11 +86,12 @@
 
     .status {
       margin-top: 2rem;
-      font-size: 1.6rem;
+      font-size: 1.35rem;
       color: #ff2a6d;
-      text-shadow: 0 0 20px #ff2a6d;
-      animation: blink 1.8s infinite;
+      text-shadow: 0 0 18px #ff2a6d;
+      animation: blink 2.2s infinite;
       letter-spacing: 2px;
+      line-height: 1.6;
     }
 
     /* Animations */
@@ -107,7 +108,7 @@
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.35; }
+      50% { opacity: 0.4; }
     }
 
     .glitch {
@@ -135,6 +136,18 @@
       text-shadow: 3px 0 #00ffff;
       animation: glitch-anim2 4s infinite linear alternate-reverse;
     }
+
+    @keyframes glitch-anim {
+      0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.6deg); }
+      5% { clip: rect(17px, 9999px, 59px, 0); }
+      100% { clip: rect(65px, 9999px, 98px, 0); transform: skew(0.2deg); }
+    }
+
+    @keyframes glitch-anim2 {
+      0% { clip: rect(65px, 9999px, 119px, 0); }
+      5% { clip: rect(30px, 9999px, 92px, 0); }
+      100% { clip: rect(86px, 9999px, 137px, 0); }
+    }
   </style>
 </head>
 <body>
@@ -147,7 +160,10 @@
     <div class="subtitle">MARCEL</div>
 
     <div class="card">
-      <div class="status">[ SYSTEM ONLINE ] • ACCESS GRANTED • NO TRACE LEFT</div>
+      <div class="status">
+        [SYSTEM ONLINE]<br>
+        [THIS WEBSITE IS WORKING WELL AND WE WILL UPDATE IT SOON WHEN ANYTHING IS DEFICIENT]
+      </div>
     </div>
   </div>
 
